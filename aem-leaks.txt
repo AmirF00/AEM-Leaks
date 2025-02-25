@@ -1,0 +1,77 @@
+#  Always audit your instance for any custom endpoints.)
+
+######################
+# /bin Endpoints:
+######################
+/bin/wcm/search/gql.json?query=type:User&limit=..2&pathPrefix=.&p.ico=
+/bin/querybuilder.json?query=type:dam:Asset&p.limit=-1
+/bin/replicate.json?path=/content/mysite&action=activate
+/bin/wcmcommand.json?cmd=updatePage&path=/content/mysite
+/bin/acs-commons/reorderNodes.json?path=/content/mysite&page=1
+/bin/exporter.json?path=/content/mysite&format=xml
+/bin/cpm/activate.json?path=/content/mysite
+/bin/preview.json?path=/content/mysite&mode=preview
+
+######################
+# /crx Endpoints:
+######################
+/crx/explorer/index.jsp?cmd=edit
+/crx/packmgr/index.jsp?cmd=upload&pkg=myPackage
+/crx/de/index.jsp?cmd=overview
+
+######################
+# /system Endpoints:
+######################
+/system/console/bundles.json?start=0&sort=name
+/system/console/configMgr
+/system/sling/logout.html?resource=/content/home
+
+######################
+# /libs Endpoints:
+######################
+/libs/granite/security/authorizables.json?onlyUsers=true
+/libs/granite/security/currentuser.json
+/libs/granite/csrf/token.json
+/libs/granite/ui/content/login.html?redirect=/content/home
+/libs/cq/core/content/login.html
+
+######################
+# /apps Endpoints:
+######################
+/apps/myapp/customServlet.json?param1=value1&debug=true
+/apps/myapp/data/export.csv?filter=active
+
+######################
+# /etc Endpoints:
+######################
+/etc/designs/myproject/clientlibs.css?version=1.2.3
+/etc/workflow/models.json?status=active
+
+######################
+# /conf Endpoints:
+######################
+/conf/global/settings.json?mode=preview
+/conf/myproject/components.json?include=templates
+
+######################
+# /var Endpoints:
+######################
+/var/commerce/cart.json?item=123&quantity=2
+/var/logs/aem-access.log?tail=100
+
+######################
+# /content Endpoints:
+######################
+/content/mysite/home.infinity.json?debug=true
+/content/dam/myassets/asset.metadata.json?detail=full
+
+######################
+# /dam Endpoints:
+######################
+/dam/metadata.json?asset=/content/dam/myasset.jpg
+/dam/asseteditor.json?asset=/content/dam/photos/image.jpg&mode=edit
+
+######################
+# Legacy /useradmin Endpoints:
+######################
+/useradmin/index.jsp?cmd=listUsers
